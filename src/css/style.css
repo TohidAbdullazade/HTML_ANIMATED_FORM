@@ -1,0 +1,296 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    width: 100vw;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background: #252525;
+    padding: 10px 0px;
+    overflow-x: hidden;
+
+}
+
+
+
+@property --box {
+    syntax: '<angle>';
+    inherits: false;
+    initial-value: 0deg;
+}
+
+.full-section {
+    position: relative;
+    width: 750px;
+    height: 160px;
+    background: repeating-conic-gradient(from var(--box), #ff2770 0%, #ff2770 5%, transparent 5%, transparent 40%, #ff2770 50%);
+    filter: drop-shadow(0px 15px 50px #000);
+    animation: rotating 4s linear infinite;
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 1s ease-in-out;
+    transition-delay: .5s;
+
+
+
+
+}
+
+.full-section:hover {
+    height: 950px;
+
+}
+
+
+@keyframes rotating {
+    0% {
+        --box: 0deg
+    }
+
+    100% {
+        --box: 360deg
+    }
+}
+
+.full-section::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: repeating-conic-gradient(from var(--box), #45f3ff 0%, #45f3ff 5%, transparent 5%, transparent 40%, #45f3ff 50%);
+    border-radius: 20px;
+    filter: drop-shadow(0px 15px 50px #000);
+    animation: rotating 2s linear infinite reverse;
+    animation-delay: -1s;
+
+}
+
+.full-section::after {
+    content: "";
+    position: absolute;
+    inset: 4px;
+    background: #2d2d39;
+    border-radius: 15px;
+    border: 8px solid #25252b;
+
+}
+
+.form-content>h1 {
+    text-align: center;
+    margin-top: 5px;
+    transition: all .5s ease-in-out;
+}
+
+.form-content h1:hover {
+    text-shadow: 1px 3px 5px wheat;
+    cursor: pointer;
+}
+
+
+
+.full-section .form-container {
+    position: absolute;
+    border-radius: 10px;
+    z-index: 1000;
+    color: #fff;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    inset: 60px;
+    background: rgba(0, 0, 0, .2);
+    box-sizing: inset 0 10px 20px rgba(0, 0, 0, .5);
+    border-bottom: 2px solid rgba(255, 255, 255, .5);
+    border-top: 2px solid rgba(255, 255, 255, .5);
+    transition: .3s;
+    color: #fff;
+    overflow: hidden;
+    transition: all 1s ease-in-out;
+}
+
+.full-section:hover .form-container {
+    inset: 5px;
+}
+
+.column {
+    display: grid;
+    grid-template-columns: 1;
+    margin: 10px 0px;
+
+}
+
+form {
+    padding: 10px 15px;
+
+}
+
+form input {
+    height: 30px;
+    border-radius: 8px;
+    border: 0;
+    margin: 5px 0px;
+    outline: none;
+    padding: 0px 10px;
+}
+
+form button {
+    width: 100%;
+    height: 100%;
+    background-color: cyan;
+    color: gray;
+    border-radius: 10px;
+    border: 0;
+    margin-top: 5px;
+    padding: 10px 0px;
+    cursor: pointer;
+    font-size: 18px;
+    position: relative;
+    transition: all ease-in-out .3s;
+    font-size: 18px;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    letter-spacing: 1px;
+}
+
+form button:hover {
+    box-shadow: 0 0 5px cyan,
+        0 0 25px cyan, 0 0 50px cyan, 0 0 100px cyan, 0 0 200px cyan;
+    color: black;
+}
+
+form textarea {
+    resize: none;
+    outline: none;
+    border-radius: 8px;
+    font-size: 20px;
+    color: gray;
+    padding: 0px 10px;
+    margin: 5px 0px;
+    width: 100%;
+    height: 120px;
+}
+
+form select {
+    height: 30px;
+    border-radius: 8px;
+    border: 0;
+    margin: 5px 0px;
+    outline: none;
+    padding: 0px 10px;
+
+}
+
+.gender-section {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+}
+
+.gender-section input {
+    height: 20px;
+    width: 40px;
+
+}
+
+
+
+form .checkbox-section {
+    display: flex;
+    align-items: center;
+    margin: 10px 0px;
+    gap: 10px;
+
+
+}
+
+.checkbox-section input {
+    height: 20px;
+    width: 20px;
+
+}
+
+/* ===> WAVE TEXT SECTION <=== */
+article {
+    margin-top: 150px;
+    color: cyan;
+    text-shadow: 0 0 5px red,
+        0 0 25px red, 0 0 50px red, 0 0 100px red, 0 0 200px red;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+article .text span {
+    display: inline-block;
+    position: relative;
+    text-shadow: 0 0 5px cyan,
+        0 0 25px cyan,
+        0 0 50px cyan,
+        0 0 100px cyan,
+        0 0 200px cyan;
+
+    animation: wave 3s ease-in-out infinite;
+}
+/* ===> WAVE TEXT SECTION-END <=== */
+
+/* ===> WAVE TEXT ANIMATION <=== */
+@keyframes wave {
+    0% {
+        transform: translateY(0);
+    }
+
+    25% {
+        transform: translateY(-50px);
+    }
+
+    50%,
+    100% {
+        transform: translateY(0);
+    }
+}
+
+
+/* =================================================================> TABLE SECTION <====================================================== */
+
+.table-section {
+    background-color: #25252b;
+    margin-top: 60px;
+    opacity: 0;
+    transition: all .5s ease-in-out;
+
+
+
+
+}
+
+.table-section table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: center;
+    color: white;
+    transition: all .3s ease-in-out;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 17px;
+
+
+}
+
+.table-section:hover {
+    opacity: 1;
+}
+
+.table-section th,
+td {
+    border: 1px solid beige;
+    padding: 10px;
+}
+
+table tr:not(thead tr):hover {
+    background-color: cyan;
+    box-shadow: 0 0 10px white, 0 0 25px white, 0 0 50px white;
+    color: #252525;
+}
+

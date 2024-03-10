@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="src/css/style.css" />
+  </head>
+  <body>
+    <!-- FORM-SECTION -->
+    <section class="full-section">
+      <div class="form-container">
+        <div class="form-content">
+          <h1>Register</h1>
+          <form autocomplete="off">
+            <div class="column">
+              <label for="name">Name</label>
+              <input
+                type="text"
+                name="name"
+                id="name"
+                placeholder="Enter name"
+                required
+              />
+              <label for="lastname">Lastame</label>
+              <input
+                type="text"
+                name="lastname"
+                id="lastname"
+                placeholder="Enter lastname"
+                required
+              />
+              <label for="email">Email</label>
+              <input
+                type="email"
+                name="email"
+                id="email"
+                placeholder="Enter email"
+                required
+              />
+              <label for="tel">Phone</label>
+              <input type="tel" name="tel" id="tel" placeholder="Enter phone" />
+              <label for="password">password</label>
+              <input
+                type="password"
+                name="password"
+                id="password"
+                placeholder="Enter password"
+                required
+              />
+              <label for="color">Favoriete Color</label>
+              <input type="color" name="color" id="color" />
+            </div>
+            <div class="column">
+              <label for="date">Birtdate</label>
+              <input type="date" name="date" id="date" />
+              <label for="age">Age</label>
+              <input
+                type="number"
+                name="age"
+                id="age"
+                placeholder="Enter age"
+                required
+              />
+              <label for="place">Birthplace</label>
+              <select name="select">
+                <option value="saray">Saray</option>
+                <option value="baki">Baku</option>
+                <option value="gence">Ganja</option>
+              </select>
+            </div>
+
+            <div class="gender-section">
+              <label>Gender</label>
+              <label for="male">Male</label>
+              <input type="radio" name="gender" id="male" />
+              <label for="female">Female</label>
+              <input type="radio" name="gender" id="female" />
+            </div>
+            <div class="column">
+              <label>Message</label>
+              <textarea></textarea>
+            </div>
+            <div class="checkbox-section">
+              <label for="check">Remember Me</label>
+              <input type="checkbox" name="" id="check" required />
+            </div>
+            <button type="submit">Submit</button>
+          </form>
+        </div>
+      </div>
+    </section>
+    <!-- FORM-SECTION-END -->
+
+    <!-- TABLE-MESSAGE-SECTION -->
+    <article>
+      <h1 class="text">Table Section shows when you hover it &darr;</h1>
+    </article>
+    <!-- TABLE-MESSAGE-SECTION-END -->
+
+    <!-- TABLE-SECTON -->
+    <section class="table-section">
+      <table>
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>Lastname</th>
+            <th>Email</th>
+            <th>Phone</th>
+            <th>Password</th>
+            <th>Birthdate</th>
+            <th>Age</th>
+            <th>Address</th>
+            <th>Gender</th>
+            <th>Color</th>
+            <th>Message</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Tohid</td>
+            <td>Abdullazade</td>
+            <td>Tohid_dev@gmail.com</td>
+            <td>077-777-77-77</td>
+            <td>*******</td>
+            <td>31.01.2002</td>
+            <td>22</td>
+            <td>Saray</td>
+            <td>Male</td>
+            <td>Red</td>
+            <td>I am a MERN Stack Developer</td>
+          </tr>
+          <tr>
+            <td>Qadir</td>
+            <td>Abdullazade</td>
+            <td>Qadir_dev@gmail.com</td>
+            <td>077-777-77-77</td>
+            <td>*******</td>
+            <td>10.11.2003</td>
+            <td>21</td>
+            <td>Saray</td>
+            <td>Male</td>
+            <td>Green</td>
+            <td>I am a Front-end Developer</td>
+          </tr>
+          <tr>
+            <td>Ruslan</td>
+            <td>Abdullayev</td>
+            <td>RuslanC#@gmail.com</td>
+            <td>077-777-77-77</td>
+            <td>*******</td>
+            <td>13.01.2001</td>
+            <td>23</td>
+            <td>Saray</td>
+            <td>Male</td>
+            <td>Blue</td>
+            <td>I am a Back-end Developer</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+    <!-- TABLE-SECTON-END -->
+
+    <script src="src/scripts/app.js" defer></script>
+  </body>
+</html>
